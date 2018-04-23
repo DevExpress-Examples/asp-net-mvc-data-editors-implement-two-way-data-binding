@@ -1,0 +1,122 @@
+@model CustomerInfo
+
+@{
+    var base64 = Model.Photo != null ? Convert.ToBase64String(Model.Photo) : null;
+    var photoSrc = String.Format("data:image/png;base64,{0}", base64);
+}
+
+<h2>Details:</h2>
+
+    <table>
+        <tr>
+            <td style="width: 200px;">
+                @Html.LabelFor(m => m.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.FirstName)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.BirthDate)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Notes)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.Notes)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.Age)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.HireDate)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.HireDate)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.Salary)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.PreferedColor)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.PreferedColor)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Photo)
+            </td>
+            <td>
+                <img src="@photoSrc" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Teams)
+            </td>
+            <td>
+                @foreach (var team in Model.Teams) {
+                    @Html.DisplayFor(m => team);
+                    ViewContext.Writer.Write("|");
+                }
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.Location)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.IsActive)
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.PrimaryEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.PrimaryEmail)
+            </td>
+        </tr>
+
+    </table>

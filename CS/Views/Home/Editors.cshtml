@@ -1,0 +1,134 @@
+@model CustomerInfo
+
+<style type="text/css">
+    label:after {
+        content: ": "
+    }
+</style>
+
+@using (Html.BeginForm()) {
+    <table>
+        <tr>
+            <td style="width: 200px;">
+                @Html.LabelFor(m => m.FirstName)
+            </td>
+            <td>
+                @Html.DevExpress().TextBoxFor(m => m.FirstName).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.BirthDate)
+            </td>
+            <td>
+                @Html.DevExpress().DateEditFor(m => m.BirthDate).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Notes)
+            </td>
+            <td>
+                @Html.DevExpress().MemoFor(m => m.Notes).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Age)
+            </td>
+            <td>
+                @Html.DevExpress().SpinEditFor(m => m.Age).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.HireDate)
+            </td>
+            <td>
+                @Html.DevExpress().CalendarFor(m => m.HireDate).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Salary)
+            </td>
+            <td>
+                @Html.DevExpress().TrackBarFor(m => m.Salary).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.PreferedColor)
+            </td>
+            <td>
+                @Html.DevExpress().ColorEditFor(m => m.PreferedColor).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Photo)
+            </td>
+            <td>
+                @Html.DevExpress().BinaryImageFor(m => m.Photo, settings => { 
+                    settings.Properties.EditingSettings.Enabled = true; 
+                }).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Teams)
+            </td>
+            <td>
+                @Html.DevExpress().TokenBoxFor(m => m.Teams).BindList(ListsDataHelper.GetTeams()).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Location)
+            </td>
+            <td>
+                @Html.DevExpress().ComboBoxFor(m => m.Location).BindList(ListsDataHelper.GetLocations()).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.IsActive)
+            </td>
+            <td>
+                @Html.DevExpress().CheckBoxFor(m => m.IsActive).GetHtml()
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.PrimaryEmail)
+            </td>
+            <td>
+                @Html.DevExpress().ButtonEditFor(m => m.PrimaryEmail).GetHtml()
+            </td>
+        </tr>
+
+    </table>
+    
+    @Html.DevExpress().Button(settings => {
+        settings.Name = "btnSubmit";
+        settings.Text = "Submit";
+        settings.UseSubmitBehavior = true;
+    }).GetHtml()
+
+    @Html.DevExpress().Button(settings => {
+        settings.Name = "btnClear";
+        settings.Text = "Clear";
+        settings.ClientSideEvents.Click = "function(s, e) { ASPxClientEdit.ClearEditorsInContainer(null); }";
+    }).GetHtml()
+}

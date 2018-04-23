@@ -1,0 +1,61 @@
+@model CustomerInfo
+
+@using (Html.BeginForm()) {
+    @Html.DevExpress().FormLayout(settings => {
+        settings.Name = "FormLayout";
+        settings.Items.Add(m => m.FirstName);
+        settings.Items.Add(m => m.BirthDate);
+        settings.Items.Add(m => m.Notes, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.Memo;
+        });
+        settings.Items.Add(m => m.Age);
+        settings.Items.Add(m => m.HireDate, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.Calendar;
+        });
+        settings.Items.Add(m => m.Salary, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.TrackBar;
+        });
+        settings.Items.Add(m => m.PreferedColor, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.ColorEdit;
+        });
+        settings.Items.Add(m => m.Photo, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.BinaryImage;
+            ((BinaryImageEditSettings)item.NestedExtensionSettings).Properties.EditingSettings.Enabled = true;
+        });
+        settings.Items.Add(m => m.Teams, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.TokenBox;
+            ((TokenBoxSettings)item.NestedExtensionSettings).Properties.DataSource = ListsDataHelper.GetTeams();
+        });
+        settings.Items.Add(m => m.Location, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.ComboBox;
+            ((ComboBoxSettings)item.NestedExtensionSettings).Properties.DataSource = ListsDataHelper.GetLocations();
+        });
+        settings.Items.Add(m => m.IsActive);
+        settings.Items.Add(m => m.PrimaryEmail, item => {
+            item.NestedExtensionType = FormLayoutNestedExtensionItemType.ButtonEdit;
+        });
+
+        settings.Items.Add(item => {
+            item.ShowCaption = DefaultBoolean.False;
+            item.SetNestedContent(() => {
+                ViewContext.Writer.Write("<table><tr><td>");
+
+                Html.DevExpress().Button(button => {
+                    button.Name = "btnSubmit";
+                    button.Text = "Submit";
+                    button.UseSubmitBehavior = true;
+                }).GetHtml();
+
+                ViewContext.Writer.Write("</td><td>");
+
+                Html.DevExpress().Button(button => {
+                    button.Name = "btnClear";
+                    button.Text = "Clear";
+                    button.ClientSideEvents.Click = "function(s, e) { ASPxClientEdit.ClearEditorsInContainer(null); }";
+                }).GetHtml();
+
+                ViewContext.Writer.Write("</td></tr></table>");
+            });
+        });
+    }).GetHtml()
+}

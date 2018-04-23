@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+    @Html.DevExpress().GetScripts( 
+        new Script { ExtensionSuite = ExtensionSuite.Editors })
+
+    @Html.DevExpress().GetStyleSheets( 
+        new StyleSheet { ExtensionSuite = ExtensionSuite.Editors })
+
+</head>
+<body>
+    <div id="main">
+        @RenderBody()
+    </div>
+</body>
+</html>
