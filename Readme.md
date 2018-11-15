@@ -1,3 +1,14 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/Controllers/HomeController.vb))
+* [CustomerInfo.cs](./CS/Models/CustomerInfo.cs) (VB: [CustomerInfo.vb](./VB/Models/CustomerInfo.vb))
+* [ListsDataHelper.cs](./CS/Models/ListsDataHelper.cs) (VB: [ListsDataHelper.vb](./VB/Models/ListsDataHelper.vb))
+* [Details.cshtml](./CS/Views/Home/Details.cshtml)
+* [Editors.cshtml](./CS/Views/Home/Editors.cshtml)
+* [FormLayout.cshtml](./CS/Views/Home/FormLayout.cshtml)
+* [Index.cshtml](./CS/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # Two-way model binding with single and multi-select editors or FormLayout
 
 
