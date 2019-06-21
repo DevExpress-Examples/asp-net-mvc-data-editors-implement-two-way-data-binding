@@ -10,6 +10,9 @@
 * [Index.cshtml](./CS/Views/Home/Index.cshtml)
 <!-- default file list end -->
 # Two-way model binding with single and multi-select editors or FormLayout
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t328772)**
+<!-- run online end -->
 
 
 <p>This example illustrates two-way Model Binding for different editor types. Standalone editors are located in the Editors.cshtml view. In addition, we have the <a href="https://documentation.devexpress.com/#AspNet/CustomDocument16028">FormLayout</a> extension in the FormLayout.cshtml view. We use the simplest possible implementation for simplicity sake. For instance, in the case of standalone editors, we use <a href="https://documentation.devexpress.com/#AspNet/CustomDocument14602">Strongly-Typed Editor Types</a>. Since <a href="https://documentation.devexpress.com/#AspNet/CustomDocument14587">ComboBox</a> and <a href="https://documentation.devexpress.com/#AspNet/CustomDocument16298">TokenBox</a> list editors fully support Model Binding, we also use them in this example. Other list editors do not fully support Model Binding and you need to use the approach illustrated in the <a href="https://www.devexpress.com/Support/Center/p/E4125">E4125 - How to use the CheckBoxList and RadioButtonList editors to edit Model fields</a> code example if you wish to work with them.<br><br><strong>See Also:</strong><br><a href="https://www.devexpress.com/Support/Center/p/KA18701">KA18701 - MVC Data Editors - Model Binding and Editing</a> <br><a href="https://www.devexpress.com/Support/Center/p/T185980">T185980 - UploadControl with Model Binding Support - Registration Form</a> </p>
