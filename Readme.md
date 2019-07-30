@@ -11,7 +11,7 @@
 <!-- default file list end -->
 # Two-way model binding with single and multi-select editors or FormLayout
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t328772)**
+**[[Run Online]](https://codecentral.devexpress.com/t328772/)**
 <!-- run online end -->
 
 
