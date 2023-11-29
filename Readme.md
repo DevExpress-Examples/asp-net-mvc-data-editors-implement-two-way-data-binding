@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Data Editors for ASP.NET MVC - How to implement two-way model binding
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t328772/)**
+**[[Run Online]](https://codecentral.devexpress.com/128549380/)**
 <!-- run online end -->
 This example demonstrates how to implement a two-way data binding between [DevExpress editor extensions](https://docs.devexpress.com/AspNetMvc/8964/components/data-editors-extensions) and model fields. The example includes the following pages:
 
