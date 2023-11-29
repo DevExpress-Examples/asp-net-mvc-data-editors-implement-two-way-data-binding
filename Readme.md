@@ -6,10 +6,10 @@
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t328772/)**
 <!-- run online end -->
-This example demonstrates how to implement two-way data binding between [DevExpress editor extensions](https://docs.devexpress.com/AspNetMvc/8964/components/data-editors-extensions) and model fields. The examples includes the following views:
+This example demonstrates how to implement two-way data binding between [DevExpress editor extensions](https://docs.devexpress.com/AspNetMvc/8964/components/data-editors-extensions) and model fields. The example includes the following pages:
 
-* The *Editors* view displays standalone [strongly-typed editors](https://docs.devexpress.com/AspNetMvc/14602/components/data-editors-extensions/strongly-typed-editor-types). 
-* The *Form Layout* view displays data editors embeded in the [FormLayout](https://docs.devexpress.com/AspNetMvc/16028/components/site-navigation-and-layout/formlayout) extension.
+* The *Editors* page displays standalone [strongly-typed editors](https://docs.devexpress.com/AspNetMvc/14602/components/data-editors-extensions/strongly-typed-editor-types). 
+* The *Form Layout* page displays data editors embedded in the [FormLayout](https://docs.devexpress.com/AspNetMvc/16028/components/site-navigation-and-layout/formlayout) extension.
 
 ## Files to Review
 
