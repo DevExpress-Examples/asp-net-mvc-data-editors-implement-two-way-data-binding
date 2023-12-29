@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Data Editors for ASP.NET MVC - How to implement two-way model binding
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128549380/)**
-<!-- run online end -->
 This example demonstrates how to implement a two-way data binding between [DevExpress editor extensions](https://docs.devexpress.com/AspNetMvc/8964/components/data-editors-extensions) and model fields. The example includes the following pages:
 
 * The *Editors* page displays standalone [strongly-typed editors](https://docs.devexpress.com/AspNetMvc/14602/components/data-editors-extensions/strongly-typed-editor-types). 
